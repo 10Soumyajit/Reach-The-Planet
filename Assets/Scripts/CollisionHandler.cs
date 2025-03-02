@@ -3,28 +3,40 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] float LevelLoadDelay = 2f;
     void OnCollisionEnter(Collision other) {
         string tag = other.gameObject.tag;
         switch (tag) {
             case "Friendly":
                 Debug.Log("Friendly object collided");
                 break;
-            case "Fuel":
-                Debug.Log("Picking Fuel");
-                break;
             case "Finish":
                 Debug.Log("You Finished");
-                NextLevel();
+                StartSuccessSequence();
                 break;
             default:
-                Reloadlevel();
+                StartCrashSequence();
                 break;
         }
+    }
+
+    void StartSuccessSequence()
+    {
+        //todo add sound effect on finish
+        //todo add particle effect on finish
+        GetComponent<Movement>().enabled = false;
+        Invoke("NextLevel", LevelLoadDelay);
+    }
+    void StartCrashSequence()
+    {
+        //todo add sound effect on crash
+        //todo add particle effect on crash
+        GetComponent<Movement>().enabled = false;
+        Invoke("Reloadlevel", LevelLoadDelay);
     }
     
     void Reloadlevel() {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        
         SceneManager.LoadScene(currentSceneIndex);
     }
 
