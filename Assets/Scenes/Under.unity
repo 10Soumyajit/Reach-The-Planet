@@ -308,23 +308,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 3.546, y: 0, z: 0}
---- !u!1 &1637785193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1890435460148290298, guid: a3d396f5327a036448fbd073920be4b6, type: 3}
-  m_PrefabInstance: {fileID: 9046451914221789059}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1637785201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637785193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49316bd6f1a9c26489178c25bade0742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &44885265297690525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,6 +588,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 3772410700166833191, guid: a3d396f5327a036448fbd073920be4b6, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: 8464ec1afe26b714baef389634dbd423, type: 3}
+    - target: {fileID: 4832731268120053115, guid: a3d396f5327a036448fbd073920be4b6, type: 3}
+      propertyPath: crash
+      value: 
+      objectReference: {fileID: 8300000, guid: 99cd5ee6c21d2b04d8286062ca3dc96a, type: 3}
+    - target: {fileID: 4832731268120053115, guid: a3d396f5327a036448fbd073920be4b6, type: 3}
+      propertyPath: success
+      value: 
+      objectReference: {fileID: 8300000, guid: f10d207aba0bfb947a5694b02281ab43, type: 3}
     - target: {fileID: 6808609400481295846, guid: a3d396f5327a036448fbd073920be4b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.62
@@ -652,10 +647,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1890435460148290298, guid: a3d396f5327a036448fbd073920be4b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1637785201}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d396f5327a036448fbd073920be4b6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
