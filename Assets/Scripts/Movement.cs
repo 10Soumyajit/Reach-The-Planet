@@ -42,7 +42,9 @@ public class Movement : MonoBehaviour
 
     private void ApplyRotation(float rotateThisFrame)
     {
+        rb.freezeRotation = true;
         transform.Rotate(Vector3.forward * rotateThisFrame * Time.fixedDeltaTime);
+        rb.freezeRotation = false;
     }
 
     // Update is called once per frame
